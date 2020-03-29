@@ -1,0 +1,20 @@
+#include <stdio.h>
+int main() {
+    int n, num1 = 0, remainder, num2;
+    printf("Enter an integer: ");
+    scanf("%d", &n);
+    num2 = n;
+
+    while (n != 0) {
+        remainder = n % 10;
+        num1 = num1 * 10 + remainder;
+        n /= 10;
+    }
+
+    if (num2 == num1)
+        printf("%d is a palindrome.", num2);
+    else
+        printf("%d is not a palindrome.", num2);
+
+    return 0;
+}
